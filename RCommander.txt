@@ -1,0 +1,129 @@
+
+> Datos <- 
++   readXL("C:/Users/alexm/Desktop/trabajos uni/SEGUNDO DE BIOLOGIA/Bioquímica 1/PRÁCTICAS DE LAB/practic bqca.xlsx",
++    rownames=FALSE, header=TRUE, na="", sheet="Hoja3", stringsAsFactors=TRUE)
+
+> RegModel.1 <- lm(Abs.400.nm~µmol.PNF, data=Datos)
+
+> summary(RegModel.1)
+
+Call:
+lm(formula = Abs.400.nm ~ µmol.PNF, data = Datos)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.026800 -0.014717 -0.004467  0.013533  0.046533 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.0011333  0.0163219   0.069    0.946    
+µmol.PNF    0.0071667  0.0002631  27.244 3.55e-09 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.02389 on 8 degrees of freedom
+Multiple R-squared:  0.9893,	Adjusted R-squared:  0.988 
+F-statistic: 742.3 on 1 and 8 DF,  p-value: 3.55e-09
+
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> attach(Datos)
+
+> attach(Datos)
+
+> xnueva<-seq(min(carapace.height),max(carapace.height),length.out=100)
+
+> xnueva
+
+> ynueva<-predict(RegModel.1,newdata=data.frame(carapace.height=xnueva),interval="confidence")
+
+> ynueva2<-predict(RegModel.1,newdata=data.frame(carapace.height=xnueva),interval="predict")
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold"
+
+> Attach(Datos)
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> attach(Datos)
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> attach(Datos)
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> attach(Datos)
+
+> xnueva<-seq(min(µmol.PNF),max(µmol.PNF),length.out=100)
+
+> xnueva
+  [1]  10.00000  10.90909  11.81818  12.72727  13.63636  14.54545  15.45455  16.36364
+  [9]  17.27273  18.18182  19.09091  20.00000  20.90909  21.81818  22.72727  23.63636
+ [17]  24.54545  25.45455  26.36364  27.27273  28.18182  29.09091  30.00000  30.90909
+ [25]  31.81818  32.72727  33.63636  34.54545  35.45455  36.36364  37.27273  38.18182
+ [33]  39.09091  40.00000  40.90909  41.81818  42.72727  43.63636  44.54545  45.45455
+ [41]  46.36364  47.27273  48.18182  49.09091  50.00000  50.90909  51.81818  52.72727
+ [49]  53.63636  54.54545  55.45455  56.36364  57.27273  58.18182  59.09091  60.00000
+ [57]  60.90909  61.81818  62.72727  63.63636  64.54545  65.45455  66.36364  67.27273
+ [65]  68.18182  69.09091  70.00000  70.90909  71.81818  72.72727  73.63636  74.54545
+ [73]  75.45455  76.36364  77.27273  78.18182  79.09091  80.00000  80.90909  81.81818
+ [81]  82.72727  83.63636  84.54545  85.45455  86.36364  87.27273  88.18182  89.09091
+ [89]  90.00000  90.90909  91.81818  92.72727  93.63636  94.54545  95.45455  96.36364
+ [97]  97.27273  98.18182  99.09091 100.00000
+
+> ynueva<-predict(RegModel.1,newdata=data.frame(µmol.PNF=xnueva),interval="confidence")
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold"
+
+> attach(Datos)
+
+> xnueva<-seq(min(µmol.PNF),max(µmol.PNF),length.out=100)
+
+> xnueva
+  [1]  10.00000  10.90909  11.81818  12.72727  13.63636  14.54545  15.45455  16.36364
+  [9]  17.27273  18.18182  19.09091  20.00000  20.90909  21.81818  22.72727  23.63636
+ [17]  24.54545  25.45455  26.36364  27.27273  28.18182  29.09091  30.00000  30.90909
+ [25]  31.81818  32.72727  33.63636  34.54545  35.45455  36.36364  37.27273  38.18182
+ [33]  39.09091  40.00000  40.90909  41.81818  42.72727  43.63636  44.54545  45.45455
+ [41]  46.36364  47.27273  48.18182  49.09091  50.00000  50.90909  51.81818  52.72727
+ [49]  53.63636  54.54545  55.45455  56.36364  57.27273  58.18182  59.09091  60.00000
+ [57]  60.90909  61.81818  62.72727  63.63636  64.54545  65.45455  66.36364  67.27273
+ [65]  68.18182  69.09091  70.00000  70.90909  71.81818  72.72727  73.63636  74.54545
+ [73]  75.45455  76.36364  77.27273  78.18182  79.09091  80.00000  80.90909  81.81818
+ [81]  82.72727  83.63636  84.54545  85.45455  86.36364  87.27273  88.18182  89.09091
+ [89]  90.00000  90.90909  91.81818  92.72727  93.63636  94.54545  95.45455  96.36364
+ [97]  97.27273  98.18182  99.09091 100.00000
+
+> ynueva<-predict(RegModel.1,newdata=data.frame(µmol.PNF=xnueva))
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
+> attach(Datos)
+
+> xnueva<-seq(min(µmol.PNF),max(µmol.PNF),length.out=100)
+
+> xnueva
+  [1]  10.00000  10.90909  11.81818  12.72727  13.63636  14.54545  15.45455  16.36364
+  [9]  17.27273  18.18182  19.09091  20.00000  20.90909  21.81818  22.72727  23.63636
+ [17]  24.54545  25.45455  26.36364  27.27273  28.18182  29.09091  30.00000  30.90909
+ [25]  31.81818  32.72727  33.63636  34.54545  35.45455  36.36364  37.27273  38.18182
+ [33]  39.09091  40.00000  40.90909  41.81818  42.72727  43.63636  44.54545  45.45455
+ [41]  46.36364  47.27273  48.18182  49.09091  50.00000  50.90909  51.81818  52.72727
+ [49]  53.63636  54.54545  55.45455  56.36364  57.27273  58.18182  59.09091  60.00000
+ [57]  60.90909  61.81818  62.72727  63.63636  64.54545  65.45455  66.36364  67.27273
+ [65]  68.18182  69.09091  70.00000  70.90909  71.81818  72.72727  73.63636  74.54545
+ [73]  75.45455  76.36364  77.27273  78.18182  79.09091  80.00000  80.90909  81.81818
+ [81]  82.72727  83.63636  84.54545  85.45455  86.36364  87.27273  88.18182  89.09091
+ [89]  90.00000  90.90909  91.81818  92.72727  93.63636  94.54545  95.45455  96.36364
+ [97]  97.27273  98.18182  99.09091 100.00000
+
+> ynueva<-predict(RegModel.1,newdata=data.frame(µmol.PNF=xnueva))
+
+> plot(Abs.400.nm~µmol.PNF,data=Datos,main="Recta patrón PNF");abline(RegModel.1,col="gold")
+
